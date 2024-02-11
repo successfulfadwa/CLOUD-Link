@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import heroSvg from "./images/hero.svg";
+import top_wave from "./images/top-wave.png";
+import btm_wave from "./images/btm-wave.png";
 // pages/index.tsx
 import Link from 'next/link';
 
@@ -32,26 +34,33 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      {/* Additional Text */}
+      {/* hero-btm Text */}
       <div className="flex flex-col md:flex-row px-9" >
         <p className="font-roboto text-lg mb-4 text-justify  px-9" style={{ paddingLeft: '78px', fontSize: '20px', fontWeight: 0, lineHeight: '47px', letterSpacing: '0em', textAlign: 'justify' }}>           More text goes here...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
       {/* Divider */}
-      <div className="w-full">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className="fill-current text-gray-200"
-        >
-          <path
-            fillOpacity="1"
-            d="M0,64L60,96C120,128,240,192,360,218.7C480,245,600,235,720,224C840,213,960,203,1080,186.7C1200,171,1320,149,1380,138.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
+      <div className="w-full" style={{ marginBottom: '-1px' }}>
+        <Image src={top_wave} alt="Image Description" layout="responsive" width={686.73} height={50.01} />
       </div>
 
+      <div style={{ backgroundColor: '#2E8544', color: 'white', paddingTop: '12px', marginTop: '-1px' }} className="py-12">
+        {/* Top Wave PNG Image */}
+
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold mb-4">Welcome to our website</h2>
+          <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+              {/* btm Wave PNG Image */}
+
+      <div className="w-full" style={{ marginBottom: '-1px' }}>
+        <Image src={btm_wave} alt="Image Description" layout="responsive" width={686.73} height={50.01} />
+      </div>
+
+      {/* my next content */}
     </div>
+
 
   );
 }
